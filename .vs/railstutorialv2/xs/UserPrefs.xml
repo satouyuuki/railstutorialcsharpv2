@@ -1,4 +1,45 @@
 ﻿<Properties StartupConfiguration="{BF578AAA-C7DC-40F6-9890-21307B7CF9BA}|Default">
-  <MonoDevelop.Ide.ItemProperties.railstutorialv2 FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="railstutorialv2/Services/UserService.cs">
+    <Files>
+      <File FileName=".gitignore" Line="11" Column="16" />
+      <File FileName="railstutorialv2/Program.cs" Line="25" Column="1" />
+      <File FileName="railstutorialv2/railstutorialv2.csproj" Line="28" Column="1" />
+      <File FileName="railstutorialv2/appsettings.json" Line="4" Column="5" />
+      <File FileName="railstutorialv2/Model/User.cs" Line="9" Column="3" />
+      <File FileName="railstutorialv2/Services/IUserService.cs" Line="15" Column="1" />
+      <File FileName="railstutorialv2/Properties/launchSettings.json" Line="6" Column="28" />
+      <File FileName="railstutorialv2/Repository/UserRepository.cs" Line="14" Column="5" />
+      <File FileName="railstutorialv2/Services/UserService.cs" Line="8" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="railstutorialv2" expanded="True" selected="True">
+            <Node name="railstutorialv2" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>_theOrders</Value>
+          <Value>theNumberOfOrdersBefore</Value>
+          <Value>_repository.GetOrders(c)</Value>
+          <Value>_repository</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.railstutorialv2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

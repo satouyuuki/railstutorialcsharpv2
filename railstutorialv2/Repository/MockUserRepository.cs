@@ -2,7 +2,7 @@
 using railstutorialv2.Models;
 namespace railstutorialv2.Repository
 {
-	public static class UserRepository
+	public static class MockUserRepository
 	{
 		public static List<User> Users = new()
 		{

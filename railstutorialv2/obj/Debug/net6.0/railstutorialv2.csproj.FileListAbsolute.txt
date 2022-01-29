@@ -45,3 +45,4 @@
 /Users/satoyuki/Project/csharp/consoleApp/railstutorialv2/railstutorialv2/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/satoyuki/Project/csharp/consoleApp/railstutorialv2/railstutorialv2/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/satoyuki/Project/csharp/consoleApp/railstutorialv2/railstutorialv2/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/satoyuki/Project/csharp/consoleApp/railstutorialv2/railstutorialv2/bin/Debug/net6.0/BCrypt.Net-Next.dll

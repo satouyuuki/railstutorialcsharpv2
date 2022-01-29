@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uNducbiVvol0/ksOZa8VtPIcGFCDoFLTisM+UI3+64vrTjMkp7eQsAKgJHKiUKHIm95C0Db2BK1DNyQL7X5pPA==",
+  "dgSpecHash": "Iczj5bIzT9ctc1LJDRV9CmZ05rhBrokXjQk0fh1PvhPsgQwAaBJVqDmr0K9EomIU8yIH/4YytF+f9dWYl5TXOw==",
   "success": true,
   "projectFilePath": "/Users/satoyuki/Project/csharp/consoleApp/railstutorialv2/railstutorialv2/railstutorialv2.csproj",
   "expectedPackageFiles": [
+    "/Users/satoyuki/.nuget/packages/bcrypt.net-next/4.0.2/bcrypt.net-next.4.0.2.nupkg.sha512",
     "/Users/satoyuki/.nuget/packages/bouncycastle.netcore/1.8.5/bouncycastle.netcore.1.8.5.nupkg.sha512",
     "/Users/satoyuki/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
     "/Users/satoyuki/.nuget/packages/google.protobuf/3.14.0/google.protobuf.3.14.0.nupkg.sha512",

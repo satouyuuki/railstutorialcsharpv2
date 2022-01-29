@@ -2,10 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using railstutorialv2.Models;
 using railstutorialv2.Repository;
+using railstutorialv2.ViewModels;
 
 namespace railstutorialv2.Controllers;
 
-[Route("api/[controller]")]
+[Route("api")]
 [ApiController]
 public class UsersController : ControllerBase
 {
@@ -23,7 +24,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    [Route("{id}")]
+    [Route("[controller]/{id}")]
     public async Task<IActionResult> GetUserByIdAsync([FromRoute] int id)
     {
         var result = await _usersRepository.GetUserByIdAsync(id);
@@ -31,11 +32,21 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    [Route("save")]
-    public async Task<IActionResult> SaveAsync(User newUser)
+    [Route("signup")]
+    public async Task<IActionResult> SaveAsync(UserViewModel viewModel)
     {
-        var result = await _usersRepository.SaveAsync(newUser);
-        return Ok(result);
+        var model = new User()
+        {
+            Name = viewModel.Name,
+            Email = viewModel.Email,
+            PasswordDigest = viewModel.PasswordDigest
+        };
+        model.Id = await _usersRepository.SaveAsync(model);
+        if(model.Id != 0)
+        {
+            return Redirect($"/api/users/{model.Id}");
+        }
+        return Ok(model);
     }
 
     [HttpPut]

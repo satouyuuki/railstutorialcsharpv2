@@ -9,4 +9,13 @@ public class User
 	public string Name { get; set; }
 	public string Email { get; set; }
 	public string PasswordDigest { get; set; }
+	/// <summary>
+    /// パスワードを検証する
+    /// </summary>
+    /// <param name="password">ユーザーに入力されたパスワード</param>
+    /// <returns>bool</returns>
+    public bool Authenticate(string password)
+    {
+		return BCrypt.Net.BCrypt.Verify(password, PasswordDigest);
+	}
 }

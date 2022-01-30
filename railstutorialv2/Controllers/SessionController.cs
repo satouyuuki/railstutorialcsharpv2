@@ -22,25 +22,27 @@ namespace railstutorialv2.Controllers
         }
 
         // GET: /<controller>/
-        [HttpGet]
-        [Route("login")]
-        public OkObjectResult New(LoginViewModel viewModel)
-        {
-            var email = viewModel.Email;
-            //var user = await _usersRepository.GetUserByEmailAsync(email);
-            //if(viewModel.Authenticate())
-            //{
-
-            //}
-
-            return Ok("hello world");
-        }
-
         [HttpPost]
         [Route("login")]
-        public OkObjectResult Create()
+        public async Task<IActionResult> Create(LoginViewModel viewModel)
         {
-            return Ok("post!");
+            var email = viewModel.Email;
+            var user = await _usersRepository.GetUserByEmailAsync(email);
+            if (user.Authenticate(viewModel.Password))
+            {
+                return Redirect($"/api/users/{user.Id}");
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet]
+        [Route("login")]
+        public OkObjectResult New()
+        {
+            return Ok("new!");
         }
 
         [HttpDelete]

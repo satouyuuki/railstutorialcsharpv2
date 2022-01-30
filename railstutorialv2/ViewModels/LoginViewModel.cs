@@ -9,8 +9,4 @@ public class LoginViewModel
     public string Email { get; set; }
     [StringLength(50, MinimumLength = 4)]
     public string Password { get; set; }
-    //public string Authenticate()
-    //{
-        
-    //}
 }

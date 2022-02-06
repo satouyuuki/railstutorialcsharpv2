@@ -6,8 +6,15 @@ using railstutorialv2.Models;
 using railstutorialv2.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// session有効か
 builder.Services.AddControllers();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(opt =>
+{
+    opt.IdleTimeout = TimeSpan.FromMinutes(20);
+    opt.Cookie.IsEssential = true;
+    opt.Cookie.HttpOnly = true;
+});
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 //var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -25,6 +32,8 @@ if(!app.Environment.IsDevelopment())
 
 app.MapSwagger();
 app.UseSwaggerUI();
+// パイプラインでセッションを使う
+app.UseSession();
 app.MapControllers();
 app.Run();
 

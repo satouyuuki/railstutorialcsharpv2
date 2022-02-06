@@ -16,6 +16,7 @@ public class UsersController : ControllerBase
     {
         _usersRepository = usersRepository;
     }
+
     [HttpGet]
     public async Task<IActionResult> GetAllUsersAsync()
     {
@@ -27,6 +28,10 @@ public class UsersController : ControllerBase
     [Route("[controller]/{id}")]
     public async Task<IActionResult> GetUserByIdAsync([FromRoute] int id)
     {
+        var sessionId = HttpContext.Session.GetString("user_id");
+        Console.WriteLine($"session id = {sessionId} .");
+        //var cookieId = HttpContext.Request.Cookies["user_id"];
+        //Console.WriteLine($"cookieId id = {cookieId} .");
         var result = await _usersRepository.GetUserByIdAsync(id);
         return Ok(result);
     }
@@ -44,6 +49,8 @@ public class UsersController : ControllerBase
         model.Id = await _usersRepository.SaveAsync(model);
         if(model.Id != 0)
         {
+            //HttpContext.Session.SetString("key", "Hoge");
+            
             return Redirect($"/api/users/{model.Id}");
         }
         return Ok(model);

@@ -30,6 +30,10 @@ namespace railstutorialv2.Controllers
             var user = await _usersRepository.GetUserByEmailAsync(email);
             if (user.Authenticate(viewModel.Password))
             {
+                // sessionに書き込む
+                HttpContext.Session.SetString("user_id", user.Id.ToString());
+                // browser cookieに書き込む
+                //HttpContext.Response.Cookies.Append("user_id", user.Id.ToString());
                 return Redirect($"/api/users/{user.Id}");
             }
             else

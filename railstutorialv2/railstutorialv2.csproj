@@ -17,6 +17,7 @@
     <None Remove="ViewModels\" />
     <None Remove="BCrypt.Net-Next" />
     <None Remove="Attributes\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
@@ -31,5 +32,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Attributes\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
